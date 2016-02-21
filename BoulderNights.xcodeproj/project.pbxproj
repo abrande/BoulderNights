@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C7342781C7A44410034614B /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7342771C7A44410034614B /* EventDetailViewController.swift */; };
+		5C73427A1C7A5A3A0034614B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7342791C7A5A3A0034614B /* UIColor+Extensions.swift */; };
 		E4076AF01C7A3B5B00FFD4BE /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4076AEF1C7A3B5B00FFD4BE /* Bar.swift */; };
 		E42A73A21C7948F70024274F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73A11C7948F70024274F /* AppDelegate.swift */; };
 		E42A73A41C7948F70024274F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73A31C7948F70024274F /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		5C7342771C7A44410034614B /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		5C7342791C7A5A3A0034614B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E4076AEF1C7A3B5B00FFD4BE /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		E42A739E1C7948F70024274F /* BoulderNights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoulderNights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A73A11C7948F70024274F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				E42A73AD1C7948F70024274F /* Info.plist */,
 				E4076AEF1C7A3B5B00FFD4BE /* Bar.swift */,
 				5C7342771C7A44410034614B /* EventDetailViewController.swift */,
+				5C7342791C7A5A3A0034614B /* UIColor+Extensions.swift */,
 			);
 			path = BoulderNights;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				E4076AF01C7A3B5B00FFD4BE /* Bar.swift in Sources */,
 				E42A73A41C7948F70024274F /* ViewController.swift in Sources */,
 				E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */,
+				5C73427A1C7A5A3A0034614B /* UIColor+Extensions.swift in Sources */,
 				E42A73D41C79A4640024274F /* TableViewController.swift in Sources */,
 				E42A73A21C7948F70024274F /* AppDelegate.swift in Sources */,
 			);
