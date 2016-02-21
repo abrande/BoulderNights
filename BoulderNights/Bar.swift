@@ -23,6 +23,7 @@ class Bar {
     var phone: String
     var email: String
     var website: String
+    var imageUrl: String
     
     
     init(json: [String:AnyObject]) {
@@ -37,7 +38,7 @@ class Bar {
         self.eventName = json["eventName"] as! String
         self.time = json["time"] as! String
         self.date = json["date"] as! String
-        
+        self.imageUrl = json["imageUrl"] as! String
     }
     
 }
