@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="FfD-GA-31z">
             <objects>
-                <viewController id="eGv-wL-l9Y" sceneMemberID="viewController">
+                <viewController id="eGv-wL-l9Y" customClass="CollectionViewController" customModule="BoulderNights" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hJn-Mu-FqA"/>
                         <viewControllerLayoutGuide type="bottom" id="gMM-4C-pcf"/>
@@ -16,9 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="lCZ-wD-JBB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5r4-8Q-IZ1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7Y-H2-Z7q">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xi6-dX-wLC">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5r4-8Q-IZ1" firstAttribute="leading" secondItem="lCZ-wD-JBB" secondAttribute="leading" id="Ynf-wq-cTH"/>
+                            <constraint firstItem="5r4-8Q-IZ1" firstAttribute="top" secondItem="hJn-Mu-FqA" secondAttribute="bottom" id="e3k-o0-gIk"/>
+                            <constraint firstItem="gMM-4C-pcf" firstAttribute="top" secondItem="5r4-8Q-IZ1" secondAttribute="bottom" id="he3-BZ-3LF"/>
+                            <constraint firstAttribute="trailing" secondItem="5r4-8Q-IZ1" secondAttribute="trailing" id="mQo-nP-iPg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vHd-aO-3iJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5r4-8Q-IZ1" id="nFe-v3-D5O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tr-dB-fAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
