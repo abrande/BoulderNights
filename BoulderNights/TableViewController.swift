@@ -8,50 +8,78 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UITableViewSource {
     
+    @IBOutlet var EventTable: UITableView!
     
+        var bars = [Bar]()
+        var eventsInfo = [Event]()
     
+    var nameList[String:String] = [:]
+    var description[String] = [:]
+    var dateAndTime[String:String] =[:]
     
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        barNameArray = [""]
+        eventTitleArray = [""]
+        descriptionArray =[""]
+        dateArray =[""]
+        timeArray =[""]
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
+            let reposURL = NSURL(string: "https://github.com/abrande/BoulderNights/blob/develop/events.json")
+            // 2
+            if let JSONData = NSData(contentsOfURL: reposURL!) {
+                // 3
+                if let json = NSJSONSerialization.JSONObjectWithData(JSONData, options: nil, error: nil) as? NSDictionary {
+                    // 4
+                    if let reposArray = json["names"] as? [NSDictionary] {
+                        // 5
+                        for item in reposArray {
+                            eventsInfo.append(event(json: name))
+                        }
+                    }
+                }
+            }
+        }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return barNameArray.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-        
-        cell.EventTitle.text = "String"
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bars.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = bars[indexPath.row].name
+        cell.textLabel?.text = eventsInfo[indexPath.row].name
+        cell.detailTextLabel?.text = eventsInfo[indexPath.row].description
+        cell.detailTextLabel?.text = eventsInfo[indexPath.row].time
+        cell.detailTextLabel?.text = eventsInfo[indexPath.row].date
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        println("You selected cell #\(indexPath.row)!")
+    }
+} 
+    
     
 
     /*

@@ -16,6 +16,8 @@
 		E42A73C21C7948F70024274F /* BoulderNightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73C11C7948F70024274F /* BoulderNightsUITests.swift */; };
 		E42A73D41C79A4640024274F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D31C79A4640024274F /* TableViewController.swift */; };
 		E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D51C79A48F0024274F /* TableViewCell.swift */; };
+		E42A73DA1C79B5650024274F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D91C79B5650024274F /* Event.swift */; };
+		E42A73DC1C79B5940024274F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73DB1C79B5940024274F /* Bar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E42A73C31C7948F70024274F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42A73D31C79A4640024274F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E42A73D51C79A48F0024274F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E42A73D91C79B5650024274F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E42A73DB1C79B5940024274F /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				E42A73A81C7948F70024274F /* Assets.xcassets */,
 				E42A73AA1C7948F70024274F /* LaunchScreen.storyboard */,
 				E42A73AD1C7948F70024274F /* Info.plist */,
+				E42A73D91C79B5650024274F /* Event.swift */,
+				E42A73DB1C79B5940024274F /* Bar.swift */,
 			);
 			path = BoulderNights;
 			sourceTree = "<group>";
@@ -263,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42A73A41C7948F70024274F /* ViewController.swift in Sources */,
+				E42A73DC1C79B5940024274F /* Bar.swift in Sources */,
 				E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */,
 				E42A73D41C79A4640024274F /* TableViewController.swift in Sources */,
 				E42A73A21C7948F70024274F /* AppDelegate.swift in Sources */,
+				E42A73DA1C79B5650024274F /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
