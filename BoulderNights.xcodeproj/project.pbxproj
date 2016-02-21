@@ -14,6 +14,8 @@
 		E42A73AC1C7948F70024274F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A73AA1C7948F70024274F /* LaunchScreen.storyboard */; };
 		E42A73B71C7948F70024274F /* BoulderNightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73B61C7948F70024274F /* BoulderNightsTests.swift */; };
 		E42A73C21C7948F70024274F /* BoulderNightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73C11C7948F70024274F /* BoulderNightsUITests.swift */; };
+		E42A73D41C79A4640024274F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D31C79A4640024274F /* TableViewController.swift */; };
+		E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D51C79A48F0024274F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E42A73BD1C7948F70024274F /* BoulderNightsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoulderNightsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A73C11C7948F70024274F /* BoulderNightsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderNightsUITests.swift; sourceTree = "<group>"; };
 		E42A73C31C7948F70024274F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E42A73D31C79A4640024274F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E42A73D51C79A48F0024274F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				E42A73A11C7948F70024274F /* AppDelegate.swift */,
 				E42A73A31C7948F70024274F /* ViewController.swift */,
 				E42A73A51C7948F70024274F /* Main.storyboard */,
+				E42A73D51C79A48F0024274F /* TableViewCell.swift */,
+				E42A73D31C79A4640024274F /* TableViewController.swift */,
 				E42A73A81C7948F70024274F /* Assets.xcassets */,
 				E42A73AA1C7948F70024274F /* LaunchScreen.storyboard */,
 				E42A73AD1C7948F70024274F /* Info.plist */,
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42A73A41C7948F70024274F /* ViewController.swift in Sources */,
+				E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */,
+				E42A73D41C79A4640024274F /* TableViewController.swift in Sources */,
 				E42A73A21C7948F70024274F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +490,7 @@
 				E42A73C81C7948F70024274F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E42A73C91C7948F70024274F /* Build configuration list for PBXNativeTarget "BoulderNightsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				E42A73CB1C7948F70024274F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E42A73CC1C7948F70024274F /* Build configuration list for PBXNativeTarget "BoulderNightsUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				E42A73CE1C7948F70024274F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
