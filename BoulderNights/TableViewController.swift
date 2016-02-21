@@ -20,7 +20,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
 
         tableView.backgroundColor = UIColor.lightGrayColor()
-        navigationItem.title = "Events"
+        navigationItem.title = "Boulder Nights"
+        
 
         startConnection()
     }
