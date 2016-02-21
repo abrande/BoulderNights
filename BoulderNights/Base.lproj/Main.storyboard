@@ -127,7 +127,6 @@
                     <navigationItem key="navigationItem" id="6AJ-6u-Wuq"/>
                     <connections>
                         <outlet property="tableView" destination="TEC-w2-l6B" id="cM8-fP-oGw"/>
-                        <segue destination="rY0-2F-oIy" kind="push" id="qc5-aS-kZu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMQ-Qu-End" userLabel="First Responder" sceneMemberID="firstResponder"/>
