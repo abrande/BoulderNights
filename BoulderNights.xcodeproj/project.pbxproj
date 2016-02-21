@@ -56,7 +56,7 @@
 		E42A73D51C79A48F0024274F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E42A73D91C79B5650024274F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E42A73DB1C79B5940024274F /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
-		E42A741B1C79E8E50024274F /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
+		E42A741B1C79E8E50024274F /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = events.json; path = ../events.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,6 @@
 				E42A73B51C7948F70024274F /* BoulderNightsTests */,
 				E42A73C01C7948F70024274F /* BoulderNightsUITests */,
 				E42A739F1C7948F70024274F /* Products */,
-				E42A741B1C79E8E50024274F /* events.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +107,7 @@
 		E42A73A01C7948F70024274F /* BoulderNights */ = {
 			isa = PBXGroup;
 			children = (
+				E42A741B1C79E8E50024274F /* events.json */,
 				E42A73A11C7948F70024274F /* AppDelegate.swift */,
 				E42A73A31C7948F70024274F /* ViewController.swift */,
 				E42A73A51C7948F70024274F /* Main.storyboard */,
