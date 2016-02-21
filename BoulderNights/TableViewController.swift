@@ -9,26 +9,38 @@
 import UIKit
 
 class TableViewController: UITableViewController, UITableViewSource {
-    
+    @IBOutlet var EventName: UILabel!
     @IBOutlet var EventTable: UITableView!
+    @IBOutlet var Desc: UILabel!
+    @IBOutlet var Tagline: UILabel!
+    @IBOutlet var Date: UILabel!
+    @IBOutlet var Time: UILabel!
     
-        var bars = [Bar]()
-        var eventsInfo = [Event]()
     
-    var nameList[String:String] = [:]
-    var description[String] = [:]
-    var dateAndTime[String:String] =[:]
+    var bars = [Bar]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        barNameArray = [""]
-        eventTitleArray = [""]
-        descriptionArray =[""]
-        dateArray =[""]
-        timeArray =[""]
 
-            let reposURL = NSURL(string: "https://github.com/abrande/BoulderNights/blob/develop/events.json")
+        
+        var eventPath = NSBundle.mainBundle().pathForResource("events", ofType: "json")
+        var data = NSData(contentsOfFile: eventPath)
+       
+        
+        for(object) in data{
+        bars.append(new bar(object.barName, object.location, object.rating, object.overview, object.phone, object.email, object.website, object.name, object.time, object.date)
+    
+        }
+        
+        /*
+ init(barName: String, location: String, rating: String, overview: String, phone: String, email: String, website: String, name: String, time: String, date: String) {
+
+    for object in data:
+    bars.append(new bar(object.barName, object...)
+*/
+            
+
+         /*   let reposURL = NSURL(string: "https://github.com/abrande/BoulderNights/blob/develop/events.json")
             // 2
             if let JSONData = NSData(contentsOfURL: reposURL!) {
                 // 3
@@ -41,9 +53,20 @@ class TableViewController: UITableViewController, UITableViewSource {
                         }
                     }
                 }
-            }
+            }*/
+
         }
     
+    
+    enum JSONValue{
+        case JString(String)
+    }
+    let json = JSONValue(JSONValue){
+        switch json["user_id"]{
+        case .JSTRING(let stringValue):
+            let id = stringValue.toInt() //is this wrong? string to int?
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,7 +75,7 @@ class TableViewController: UITableViewController, UITableViewSource {
 
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,17 +89,17 @@ class TableViewController: UITableViewController, UITableViewSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = bars[indexPath.row].name
-        cell.textLabel?.text = eventsInfo[indexPath.row].name
-        cell.detailTextLabel?.text = eventsInfo[indexPath.row].description
-        cell.detailTextLabel?.text = eventsInfo[indexPath.row].time
-        cell.detailTextLabel?.text = eventsInfo[indexPath.row].date
+        cell.textLabel!.text = bars[indexPath.row].barName
+        cell.detailTextLabel?.text = bars[indexPath.row].name
+        cell.detailTextLabel?.text = bars[indexPath.row].description
+        cell.detailTextLabel?.text = bars[indexPath.row].time
+        cell.detailTextLabel?.text = bars[indexPath.row].date
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        println("You selected cell #\(indexPath.row)!")
+        
     }
 } 
     
