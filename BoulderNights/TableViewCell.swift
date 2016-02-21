@@ -18,6 +18,13 @@ class TableViewCell: UITableViewCell {
     
     
     
+    func configCell(bar:Bar){
+        EventTitle.text = bar.eventName
+        Desc.text = bar.description
+        tagline.text = bar.overview
+        Date.text = bar.date
+        Time.text = bar.time
+    }
     
     
     override func awakeFromNib() {

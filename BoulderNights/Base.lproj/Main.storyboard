@@ -126,11 +126,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="6AJ-6u-Wuq"/>
                     <connections>
-                        <outlet property="Date" destination="mBh-ug-MEw" id="Lci-ip-wVj"/>
-                        <outlet property="Desc" destination="9YY-WD-iyj" id="zM5-8P-9h7"/>
-                        <outlet property="EventName" destination="aCk-Zf-pXr" id="LEp-j9-slw"/>
-                        <outlet property="Tagline" destination="lqu-Zr-I13" id="0qb-DV-nMK"/>
-                        <outlet property="Time" destination="p39-eY-grC" id="qse-mQ-7rc"/>
+                        <outlet property="tableView" destination="TEC-w2-l6B" id="cM8-fP-oGw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMQ-Qu-End" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,126 +8,76 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
-    @IBOutlet var EventName: UILabel!
-    @IBOutlet var EventTable: UITableView!
-    @IBOutlet var Desc: UILabel!
-    @IBOutlet var Tagline: UILabel!
-    @IBOutlet var Date: UILabel!
-    @IBOutlet var Time: UILabel!
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var bars = [Bar]()
+    var bars: [Bar] = []
+    
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.dataSource = self
+        tableView.delegate = self
         
-        let eventPath = NSBundle.mainBundle().pathForResource("events", ofType: "json")
-        let data = NSData(contentsOfFile: eventPath!)
-       
-        /*
-        for object in data{
-        bars.append(new, bar(object.barName, object.location, object.rating, object.overview, object.phone, object.email, object.website, object.name, object.time, object.date),
+        startConnection()
+    }
     
-        }
-        */
-        /*
- init(barName: String, location: String, rating: String, overview: String, phone: String, email: String, website: String, name: String, time: String, date: String) {
+    //----------------------
+    // Get JSON data from URL
+    // Code block from http://www.learnswiftonline.com/mini-tutorials/how-to-download-and-read-json/
+    //----------------------
+    func startConnection(){
+        let requestURL: NSURL = NSURL(string: "https://raw.githubusercontent.com/abrande/BoulderNights/eventsJSON/events.json")!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
+        let session = NSURLSession.sharedSession()
 
-    for object in data:
-    bars.append(new bar(object.barName, object...)
-*/
-            
-        //----------------------
-        // Get JSON data from URL
-        // Code block from http://www.learnswiftonline.com/mini-tutorials/how-to-download-and-read-json/
-        //----------------------
-        func startConnection(){
-            let requestURL: NSURL = NSURL(string: "https://www.learnswiftonline.com/Samples/subway.json")!
-            let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(urlRequest) {
-                (data, response, error) -> Void in
-                
-                let httpResponse = response as! NSHTTPURLResponse
-                let statusCode = httpResponse.statusCode
-                
-                if (statusCode == 200) {
-                    do{
-                        let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
-                        if let items = json["stations"] as? [[String: AnyObject]] {
-                            for item in items {
-                                if let name = item["stationName"] as? String {
-                                    if let year = item["buildYear"] as? String {
-                                        NSLog("%@ (Built %@)",name,year)
-                                    }
-                                }
-                            }
-                        }
-                    }catch {
-                        print("Error with Json: \(error)")
-                    }
+        let task = session.dataTaskWithRequest(urlRequest) { [weak self] (data, response, error) -> Void in
+            guard let weakSelf = self else { return }
+            guard let data = data else { return }
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! [AnyObject]
+                for bar in json {
+                    let jsonO = bar as! [String:AnyObject]
+                    let b = Bar(json: jsonO)
+                    weakSelf.bars.append(b)
                 }
+                weakSelf.tableView.reloadData()
+            } catch {
+                print("Error \(error)")
             }
-            task.resume()
         }
-
-        }
-    
-    
-  
-    
-    enum JSONValue{
-        case JString(String)
-    
-    let json = JSONValue(JSONValue){
-        switch json["user_id"]{
-        case .JSTRING(let stringValue):
-            let id = stringValue.toInt() //is this wrong? string to int?
-        }
-    }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            
+        task.resume()
     }
 
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-
     
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-
-    }
     
-   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bars.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) 
-        cell.textLabel!.text = bars[indexPath.row].barName
-        cell.detailTextLabel?.text = bars[indexPath.row].name
-        cell.detailTextLabel?.text = bars[indexPath.row].description
-        cell.detailTextLabel?.text = bars[indexPath.row].time
-        cell.detailTextLabel?.text = bars[indexPath.row].date
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! TableViewCell
+        cell.configCell(bars[indexPath.row])
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+    }
+    
+    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         
     }
 } 
     
-    
+
 
     /*
     // Override to support conditional editing of the table view.

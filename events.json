@@ -2,7 +2,7 @@
 
 
 {
-	"name": "Happy Hour",
+	"eventName": "Happy Hour",
 	
 	"time": "3 PM - 6 PM",
 	
@@ -28,7 +28,7 @@
 	},
 
 	{
-		"name": "50 Shades of Blue",
+		"eventName": "50 Shades of Blue",
 		
 		"time": "9PM - Close",
 		
@@ -53,7 +53,7 @@
 	},
 
 	{
-		"name": "Das Boot All Day",
+		"eventName": "Das Boot All Day",
 		
 		"time": "7PM - Close",
 		
@@ -79,7 +79,7 @@
 	},
 
 	{
-		"name": "Ladies Night",
+		"eventName": "Ladies Night",
 		
 		"time": "10PM",
 		
@@ -105,7 +105,7 @@
 
 
 	{
-		"name": "Karaoke Night",
+		"eventName": "Karaoke Night",
 		
 		"time": "9PM to Close",
 		
@@ -132,7 +132,7 @@
 
 
 	{
-		"name": "Trivia Night",
+		"eventName": "Trivia Night",
 		
 		"time": "10 Pm - Close",
 		
@@ -150,13 +150,14 @@
 
 		"phone": "303-442-8162",
 
+
 		"website": "darkhorsebar.com"
 
 
 	},
 
 	{
-		"name": "Game Night",
+		"eventName": "Game Night",
 		
 		"time": "10PM",
 		
@@ -182,7 +183,7 @@
 
 	},
 	{
-		"name": "$1 Shots",
+		"eventName": "$1 Shots",
 		
 		"time": "10PM - 2AM",
 		
@@ -209,7 +210,7 @@
 	},
 
 	{
-		"name": "Dance Off",
+		"eventName": "Dance Off",
 		
 		"time": "11 PM",
 		
@@ -238,7 +239,7 @@
 
 
 	{
-		"name": "Half-priced Margaritas",
+		"eventName": "Half-priced Margaritas",
 		
 		"time": "4PM - 10 PM",
 		
@@ -264,7 +265,7 @@
 	},
 
 	{
-		"name": "Jazz Wednesday!",
+		"eventName": "Jazz Wednesday!",
 		
 		"time": "4Pm - 10 PM",
 		
@@ -288,7 +289,7 @@
 
 	},
 	{
-		"name": "Taco Truck!",
+		"eventName": "Taco Truck!",
 		
 		"time": "5PM - Close ",
 		
@@ -314,7 +315,7 @@
 
 
 	{
-		"name": "Persian New Year Celebration",
+		"eventName": "Persian New Year Celebration",
 		
 		"time": "5 PM",
 		
