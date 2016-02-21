@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eGv-wL-l9Y">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FfD-GA-31z">
+            <objects>
+                <viewController id="eGv-wL-l9Y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hJn-Mu-FqA"/>
+                        <viewControllerLayoutGuide type="bottom" id="gMM-4C-pcf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lCZ-wD-JBB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontpage-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ffi-62-WLR">
+                                <rect key="frame" x="0.0" y="-38" width="349" height="665"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-pU-FCI">
+                                <rect key="frame" x="4" y="65" width="312" height="483"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-oB-O9R">
+                                <rect key="frame" x="131" y="369" width="59" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <state key="normal" title="Click Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5fy-G6-kha" kind="push" id="eeF-0B-2wQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vHd-aO-3iJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tr-dB-fAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="551"/>
+        </scene>
+        <!--View Two-->
+        <scene sceneID="8rP-bZ-ut3">
+            <objects>
+                <viewController id="5fy-G6-kha" customClass="ViewTwo" customModule="BoulderNights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FWA-tq-u2Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="rhn-Mc-dJe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICI-Jh-03U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Iq-4u-qT4">
+                                <rect key="frame" x="0.0" y="185" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="477745140.81399298">
+                                    <!--2016-02-21 10:59:00 +0000-->
+                                </date>
+                                <connections>
+                                    <segue destination="toR-Zd-17X" kind="push" id="Mxo-hZ-oOO"/>
+                                </connections>
+                            </datePicker>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-DT-X5e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uca-Mx-Dur">
+                                <rect key="frame" x="132" y="442" width="56" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <state key="normal" title="SUMBIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nTL-ax-7GV"/>
+                    <connections>
+                        <outlet property="Date" destination="1Iq-4u-qT4" id="LuJ-Pd-kaf"/>
+                        <outlet property="searchDisplayController" destination="6ne-h6-yrq" id="jCX-gm-9B8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJc-W0-iF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="6ne-h6-yrq">
+                    <connections>
+                        <outlet property="delegate" destination="5fy-G6-kha" id="bRd-Vz-v0D"/>
+                        <outlet property="searchContentsController" destination="5fy-G6-kha" id="A7W-3g-Gm2"/>
+                        <outlet property="searchResultsDataSource" destination="5fy-G6-kha" id="wtf-4O-Ivv"/>
+                        <outlet property="searchResultsDelegate" destination="5fy-G6-kha" id="SVU-6G-Q4b"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1625" y="551"/>
+        </scene>
+        <!--View Three-->
+        <scene sceneID="hmg-R8-QTc">
+            <objects>
+                <viewController id="toR-Zd-17X" customClass="ViewThree" customModule="BoulderNights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyR-9n-z0m"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBD-9O-ifk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZF-8n-DCo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-q7-8MX">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="71"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MONTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKQ-bt-48U">
+                                <rect key="frame" x="0.0" y="79" width="320" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YG4-E8-26x"/>
+                    <connections>
+                        <outlet property="ViewThree" destination="lKQ-bt-48U" id="zq1-0u-izG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaY-SL-AAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2080" y="551"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frontpage-1" width="1563" height="2696"/>
+        <image name="header" width="3123" height="585"/>
+        <image name="logo-1" width="1563" height="2696"/>
+    </resources>
+</document>
