@@ -115,7 +115,6 @@
                                     <outlet property="EventTitle" destination="aCk-Zf-pXr" id="fft-4V-r5r"/>
                                     <outlet property="Time" destination="p39-eY-grC" id="HUk-xE-xBI"/>
                                     <outlet property="tagline" destination="lqu-Zr-I13" id="twi-Hy-D8C"/>
-                                    <segue destination="rY0-2F-oIy" kind="showDetail" trigger="accessoryAction" id="Ayw-IC-dU0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -133,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2484" y="270"/>
         </scene>
-        <!--View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="LbJ-NJ-eS8">
             <objects>
-                <viewController id="rY0-2F-oIy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetailViewController" id="rY0-2F-oIy" customClass="EventDetailViewController" customModule="BoulderNights" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kuf-Hf-jJw"/>
                         <viewControllerLayoutGuide type="bottom" id="7dy-Mw-vFi"/>
@@ -144,12 +143,6 @@
                     <view key="view" contentMode="scaleToFill" id="QSh-4X-JNp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxj-fJ-eaY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
