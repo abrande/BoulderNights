@@ -27,7 +27,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     // Code block from http://www.learnswiftonline.com/mini-tutorials/how-to-download-and-read-json/
     //----------------------
     func startConnection(){
-        let requestURL: NSURL = NSURL(string: "https://raw.githubusercontent.com/abrande/BoulderNights/eventsJSON/events.json")!
+        let requestURL: NSURL = NSURL(string: "https://raw.githubusercontent.com/abrande/BoulderNights/develop/events.json")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
 
@@ -69,11 +69,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-    }
-    
-    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        
+        let tappedBar = bars[indexPath.row]
+
+        let detailVC = EventDetailViewController.viewController()
+        detailVC.bar = tappedBar
+
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 } 
     
