@@ -1,5 +1,83 @@
 {
 	"events": [
+		
+		
+			{
+			"name": "Happy Hour",
+			"time": "3 PM - 6 PM",
+			"description": "Drink specials during the week!",
+			"date": "Sunday - Friday",
+
+			"bar" : {
+
+				"name": "The Sink",
+
+				"location": "1165 13th St, Boulder, CO",
+
+				"rating": 0,
+
+				"overview": "Funky, family-owned landmark for Sinkburgers & Ugly Crust Pizza plus local & regional microbrews.",
+
+				"phone": "303-444-7465",
+
+				"email": "thesink@gmail.com",
+
+				"website": "thesink.com",
+
+			}
+		},
+		
+			{
+			"name": "50 Shades of Blue",
+			"time": "9PM - Close",
+			"description": "Live and original blues music",
+			"date": "February, 19, 2016",
+
+			"bar" : {
+
+				"name": "JOHNNYS CIGAR BAR",
+
+				"location": "1801 13th St, Boulder, CO 80302",
+
+				"rating": 0,
+
+				"overview": "Leather-bound lounge with multiple humidors, full bar, live music, TVs & patio, plus happy hou",
+
+				"phone": "303-449-0884",
+
+				"email": "johnnyscigars@gmail.com",
+
+				"website": "johnnyscigars.com",
+
+			}
+		},
+		
+		{
+			"name": "Das Boot All Day",
+			"time": "7PM - Close",
+			"description": "Beer in a boot!",
+			"date": "February 23, 2016",
+
+			"bar" : {
+
+				"name": "Bohemian Biergarten",
+
+				"location": "1005 Pearl St, Boulder, CO 80302",
+
+				"rating": 0,
+
+				"overview": "Rustic, Czech-style place offering a wide beer menu & traditional eats, plus a patio & live music.",
+
+				"phone": "(720) 328-8328",
+
+				"email": "bohemianbiergarten@gmail.com",
+
+				"website": "bohemianbiergarten.com",
+
+			}
+
+		},
+		
 		{
 			"name": "Ladies Night",
 			"time": "10PM",
@@ -24,31 +102,8 @@
 
 			}
 		},
-		{
-			"name": "Dance Off",
-			"time": "11 PM",
-			"description": "Want to dance?",
-			"date": "February, 27, 2016",
-
-			"bar" : {
-
-				"name": "Absinthe House",
-
-				"location": "1109 Walnut St, Boulder, CO",
-
-				"rating": 0,
-
-				"overview": "Hip cocktail lounge & rooftop bar with absinthe service & snacks, DJs & dancing, plus happy hour.",
-
-				"phone": "(303) 443-8600",
-
-				"email": "absinthehouseboulder@gmail.com",
-
-				"website": "http://www.absinthehouseboulder.com/",
-
-			}
-
-		},
+	
+	
 		{
 			"name": "Karaoke Night",
 			"time": "9PM to Close",
@@ -73,30 +128,9 @@
 
 			}
 		},
-		{
-			"name": "Happy Hour",
-			"time": "3 PM - 6 PM",
-			"description": "Drink specials during the week!",
-			"date": "Sunday - Friday",
-
-			"bar" : {
-
-				"name": "The Sink",
-
-				"location": "1165 13th St, Boulder, CO",
-
-				"rating": 0,
-
-				"overview": "Funky, family-owned landmark for Sinkburgers & Ugly Crust Pizza plus local & regional microbrews.",
-
-				"phone": "303-444-7465",
-
-				"email": "thesink@gmail.com",
-
-				"website": "thesink.com",
-
-			}
-		},
+		
+		
+	
 		{
 			"name": "Trivia Night",
 			"time": "10 Pm - Close",
@@ -119,6 +153,84 @@
 
 			}
 		},
+		
+			{
+			"name": "Game Night",
+			"time": "10PM",
+			"description": "Tournaments, pinball, SkeeBall, and more!",
+			"date": "February, 25, 2016",
+
+			"bar" : {
+
+				"name": "Press Play Bar ",
+
+				"location": "1005 Pearl St, Boulder, CO 80302",
+
+				"rating": 0,
+
+				"overview": "No-frills hangout with pub grub, flat-screens & various old-school video games in a simple space.",
+
+				"phone": "720-508-4916",
+
+				"email": "pressplaybar@gmail.com",
+
+				"website": "pressplaybar.com",
+
+			}
+		},
+		{
+			"name": "$1 Shots",
+			"time": "10PM - 2AM",
+			"description": "Toss back $1 shots in adddition to our many other daily drink specials",
+			"date": "February, 25, 2016",
+
+			"bar" : {
+
+				"name": "Sundown Saloon",
+
+				"location": "1136 Pearl St, Boulder, CO 80302",
+
+				"rating": 0,
+
+				"overview": "CU students throng this rollicking basement bar with pool tables, bargain shots & pitchers.",
+
+				"phone": "303-449-4987",
+
+				"email": "sundownsaloon@gmail.com",
+
+				"website": "Sundownsaloon.com",
+
+			}
+		},
+			
+			{
+			"name": "Dance Off",
+			"time": "11 PM",
+			"description": "Want to dance?",
+			"date": "February, 27, 2016",
+
+			"bar" : {
+
+				"name": "Absinthe House",
+
+				"location": "1109 Walnut St, Boulder, CO",
+
+				"rating": 0,
+
+				"overview": "Hip cocktail lounge & rooftop bar with absinthe service & snacks, DJs & dancing, plus happy hour.",
+
+				"phone": "(303) 443-8600",
+
+				"email": "absinthehouseboulder@gmail.com",
+
+				"website": "http://www.absinthehouseboulder.com/",
+
+				}
+			},	
+			
+			
+			
+
 		{
 			"name": "Half-priced Margaritas",
 			"time": "4PM - 10 PM",
@@ -143,6 +255,7 @@
 
 			}
 		},
+		
 		{
 			"name": "Jazz Wednesday!",
 			"time": "4Pm - 10 PM",
@@ -191,54 +304,8 @@
 
 			}
 		},
-		{
-			"name": "50 Shades of Blue",
-			"time": "9PM - Close",
-			"description": "Live and original blues music",
-			"date": "February, 19, 2016",
-
-			"bar" : {
-
-				"name": "JOHNNYS CIGAR BAR",
-
-				"location": "1801 13th St, Boulder, CO 80302",
-
-				"rating": 0,
-
-				"overview": "Leather-bound lounge with multiple humidors, full bar, live music, TVs & patio, plus happy hou",
-
-				"phone": "303-449-0884",
-
-				"email": "johnnyscigars@gmail.com",
-
-				"website": "johnnyscigars.com",
-
-			}
-		},
-		{
-			"name": "Game Night",
-			"time": "10PM",
-			"description": "Tournaments, pinball, SkeeBall, and more!",
-			"date": "February, 25, 2016",
-
-			"bar" : {
-
-				"name": "Press Play Bar ",
-
-				"location": "1005 Pearl St, Boulder, CO 80302",
-
-				"rating": 0,
-
-				"overview": "No-frills hangout with pub grub, flat-screens & various old-school video games in a simple space.",
-
-				"phone": "720-508-4916",
-
-				"email": "pressplaybar@gmail.com",
-
-				"website": "pressplaybar.com",
-
-			}
-		},
+	
+	
 		{
 			"name": "Persian New Year Celebration",
 			"time": "5 PM",
@@ -264,55 +331,8 @@
 			}
 
 		},
-		{
-			"name": "Das Boot All Day",
-			"time": "7PM - Close",
-			"description": "Beer in a boot!",
-			"date": "February 23, 2016",
-
-			"bar" : {
-
-				"name": "Bohemian Biergarten",
-
-				"location": "1005 Pearl St, Boulder, CO 80302",
-
-				"rating": 0,
-
-				"overview": "Rustic, Czech-style place offering a wide beer menu & traditional eats, plus a patio & live music.",
-
-				"phone": "(720) 328-8328",
-
-				"email": "bohemianbiergarten@gmail.com",
-
-				"website": "bohemianbiergarten.com",
-
-			}
-
-		},
-		{
-			"name": "$1 Shots",
-			"time": "10PM - 2AM",
-			"description": "Toss back $1 shots in adddition to our many other daily drink specials",
-			"date": "February, 25, 2016",
-
-			"bar" : {
-
-				"name": "Sundown Saloon",
-
-				"location": "1136 Pearl St, Boulder, CO 80302",
-
-				"rating": 0,
-
-				"overview": "CU students throng this rollicking basement bar with pool tables, bargain shots & pitchers.",
-
-				"phone": "303-449-4987",
-
-				"email": "sundownsaloon@gmail.com",
-
-				"website": "Sundownsaloon.com",
-
-			}
-		}
+		
+		
 	]
 
 }
