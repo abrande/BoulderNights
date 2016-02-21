@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, UITableViewSource {
+class TableViewController: UITableViewController {
     @IBOutlet var EventName: UILabel!
     @IBOutlet var EventTable: UITableView!
     @IBOutlet var Desc: UILabel!
@@ -16,22 +16,21 @@ class TableViewController: UITableViewController, UITableViewSource {
     @IBOutlet var Date: UILabel!
     @IBOutlet var Time: UILabel!
     
-    
     var bars = [Bar]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        var eventPath = NSBundle.mainBundle().pathForResource("events", ofType: "json")
-        var data = NSData(contentsOfFile: eventPath)
+        let eventPath = NSBundle.mainBundle().pathForResource("events", ofType: "json")
+        let data = NSData(contentsOfFile: eventPath!)
        
-        
-        for(object) in data{
-        bars.append(new bar(object.barName, object.location, object.rating, object.overview, object.phone, object.email, object.website, object.name, object.time, object.date)
+        /*
+        for object in data{
+        bars.append(new, bar(object.barName, object.location, object.rating, object.overview, object.phone, object.email, object.website, object.name, object.time, object.date),
     
         }
-        
+        */
         /*
  init(barName: String, location: String, rating: String, overview: String, phone: String, email: String, website: String, name: String, time: String, date: String) {
 
@@ -39,35 +38,56 @@ class TableViewController: UITableViewController, UITableViewSource {
     bars.append(new bar(object.barName, object...)
 */
             
-
-         /*   let reposURL = NSURL(string: "https://github.com/abrande/BoulderNights/blob/develop/events.json")
-            // 2
-            if let JSONData = NSData(contentsOfURL: reposURL!) {
-                // 3
-                if let json = NSJSONSerialization.JSONObjectWithData(JSONData, options: nil, error: nil) as? NSDictionary {
-                    // 4
-                    if let reposArray = json["names"] as? [NSDictionary] {
-                        // 5
-                        for item in reposArray {
-                            eventsInfo.append(event(json: name))
+        //----------------------
+        // Get JSON data from URL
+        // Code block from http://www.learnswiftonline.com/mini-tutorials/how-to-download-and-read-json/
+        //----------------------
+        func startConnection(){
+            let requestURL: NSURL = NSURL(string: "https://www.learnswiftonline.com/Samples/subway.json")!
+            let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
+            let session = NSURLSession.sharedSession()
+            let task = session.dataTaskWithRequest(urlRequest) {
+                (data, response, error) -> Void in
+                
+                let httpResponse = response as! NSHTTPURLResponse
+                let statusCode = httpResponse.statusCode
+                
+                if (statusCode == 200) {
+                    do{
+                        let json = try NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments)
+                        if let items = json["stations"] as? [[String: AnyObject]] {
+                            for item in items {
+                                if let name = item["stationName"] as? String {
+                                    if let year = item["buildYear"] as? String {
+                                        NSLog("%@ (Built %@)",name,year)
+                                    }
+                                }
+                            }
                         }
+                    }catch {
+                        print("Error with Json: \(error)")
                     }
                 }
-            }*/
+            }
+            task.resume()
+        }
 
         }
     
     
+  
+    
     enum JSONValue{
         case JString(String)
-    }
+    
     let json = JSONValue(JSONValue){
         switch json["user_id"]{
         case .JSTRING(let stringValue):
             let id = stringValue.toInt() //is this wrong? string to int?
         }
     }
-
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,16 +99,20 @@ class TableViewController: UITableViewController, UITableViewSource {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return barNameArray.count
+        1
     }
 
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+
+    }
+    
+   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bars.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) 
         cell.textLabel!.text = bars[indexPath.row].barName
         cell.detailTextLabel?.text = bars[indexPath.row].name
         cell.detailTextLabel?.text = bars[indexPath.row].description
@@ -97,7 +121,7 @@ class TableViewController: UITableViewController, UITableViewSource {
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }
@@ -150,4 +174,4 @@ class TableViewController: UITableViewController, UITableViewSource {
     }
     */
 
-}
+
