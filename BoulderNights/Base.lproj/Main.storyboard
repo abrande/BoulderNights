@@ -45,7 +45,6 @@
         <!--Item 1-->
         <scene sceneID="vAY-8q-RA7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oyg-eS-YVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dgm-Tn-LN6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="q8X-hr-0G5"/>
                     <toolbarItems/>
@@ -58,6 +57,7 @@
                         <segue destination="l7C-Eb-0Ba" kind="relationship" relationship="rootViewController" id="Htp-Ga-AN6"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyg-eS-YVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680" y="284"/>
         </scene>

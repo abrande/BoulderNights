@@ -18,6 +18,7 @@
 		E42A73D61C79A48F0024274F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D51C79A48F0024274F /* TableViewCell.swift */; };
 		E42A73DA1C79B5650024274F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73D91C79B5650024274F /* Event.swift */; };
 		E42A73DC1C79B5940024274F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A73DB1C79B5940024274F /* Bar.swift */; };
+		E42A741C1C79E8E50024274F /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = E42A741B1C79E8E50024274F /* events.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E42A73D51C79A48F0024274F /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E42A73D91C79B5650024274F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E42A73DB1C79B5940024274F /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		E42A741B1C79E8E50024274F /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E42A73B51C7948F70024274F /* BoulderNightsTests */,
 				E42A73C01C7948F70024274F /* BoulderNightsUITests */,
 				E42A739F1C7948F70024274F /* Products */,
+				E42A741B1C79E8E50024274F /* events.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42A741C1C79E8E50024274F /* events.json in Resources */,
 				E42A73AC1C7948F70024274F /* LaunchScreen.storyboard in Resources */,
 				E42A73A91C7948F70024274F /* Assets.xcassets in Resources */,
 				E42A73A71C7948F70024274F /* Main.storyboard in Resources */,
