@@ -30,6 +30,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = UIColor.lightGrayColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
