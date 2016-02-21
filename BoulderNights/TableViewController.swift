@@ -18,8 +18,16 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
+
+        tableView.backgroundColor = UIColor.lightGrayColor()
+        navigationItem.title = "Events"
+
         startConnection()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
     }
     
     //----------------------
@@ -41,7 +49,9 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                     let b = Bar(json: jsonO)
                     weakSelf.bars.append(b)
                 }
-                weakSelf.tableView.reloadData()
+                dispatch_async(dispatch_get_main_queue(), {
+                    weakSelf.tableView.reloadData()
+                })
             } catch {
                 print("Error \(error)")
             }
