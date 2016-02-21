@@ -34,7 +34,7 @@ class Bar {
         self.phone = json["phone"] as! String
         self.email = json["email"] as! String
         self.website = json["website"] as! String
-        self.eventName = json["eventName"] as! String
+        self.eventName = json["name"] as! String
         self.time = json["time"] as! String
         self.date = json["date"] as! String
         
